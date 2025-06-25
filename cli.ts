@@ -73,7 +73,6 @@ class WasupDocCLI {
     positionals?: string[],
   }) {
     if (options.values.help) {
-      console.debug()
       console.debug(this.help)
       return;
     }
