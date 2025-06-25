@@ -1,0 +1,16 @@
+{
+  "name": "wasupdoc",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "bin": "bin.ts",
+  "dependencies": {
+    "@did.coop/did-key-ed25519": "github:did-coop/did-key-ed25519",
+    "@wallet.storage/did-sshpk": "^0.0.5",
+    "dedent": "^1.6.0",
+    "sshpk": "^1.18.0"
+  },
+  "license": "MIT"
+}
