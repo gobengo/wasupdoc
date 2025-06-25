@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@did.coop/did-key-ed25519": "github:did-coop/did-key-ed25519",
+    "@types/node": "^24.0.4",
     "@wallet.storage/did-sshpk": "^0.0.5",
     "dedent": "^1.6.0",
     "sshpk": "^1.18.0",
