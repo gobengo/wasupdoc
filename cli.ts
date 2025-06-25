@@ -76,14 +76,16 @@ class WasupDocCLI {
       console.debug(this.help)
       return;
     }
-    const controller = await this.getControllerDidForController(options.values.controller, options.env)
+    const controller = options.values.controller
+      ? await this.getControllerDidForController(options.values.controller, options.env)
+      : undefined
     const doc = {
       controller,
     }
     console.debug(JSON.stringify(doc, undefined, '\t'))
   }
 
-  async getControllerDidForController(controller?: string, env: WasupDocCLIEnv = {}) {
+  async getControllerDidForController(controller: string, env: WasupDocCLIEnv = {}) {
     if (controller?.startsWith('did:')) return controller
     const signer = this.createSignerFromIdentity(controller, env)
     const did = await this.getControllerDidForSigner(signer)
@@ -97,7 +99,7 @@ class WasupDocCLI {
     return controller
   }
 
-  async createSignerFromIdentity(identity: string | undefined, env: WasupDocCLIEnv) {
+  async createSignerFromIdentity(identity: string, env: WasupDocCLIEnv) {
     if (!identity) throw new Error(`unable to create signer from falsy identity`, { cause: { identity } })
     const pathToKey = identity
     const pathToKeyExists = typeof pathToKey === "string" && existsSync(pathToKey.toString())

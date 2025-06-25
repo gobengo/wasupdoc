@@ -5,12 +5,15 @@
   "scripts": {
     "test": "node --test"
   },
-  "bin": "bin.ts",
+  "bin": {
+    "wasupdoc": "./bin/wasupdoc.js"
+  },
   "dependencies": {
     "@did.coop/did-key-ed25519": "github:did-coop/did-key-ed25519",
     "@wallet.storage/did-sshpk": "^0.0.5",
     "dedent": "^1.6.0",
-    "sshpk": "^1.18.0"
+    "sshpk": "^1.18.0",
+    "tsx": "^4.20.3"
   },
   "license": "MIT"
 }
