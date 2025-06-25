@@ -1,6 +1,6 @@
 {
   "name": "wasupdoc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "test": "node --test"
@@ -9,7 +9,7 @@
     "wasupdoc": "./bin/wasupdoc.js"
   },
   "dependencies": {
-    "@did.coop/did-key-ed25519": "^0.0.11",
+    "@did.coop/did-key-ed25519": "^0.0.12",
     "@types/node": "^24.0.4",
     "@wallet.storage/did-sshpk": "^0.0.5",
     "dedent": "^1.6.0",
